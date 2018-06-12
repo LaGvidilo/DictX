@@ -1,0 +1,230 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = F1F5C39D20CAC45600236B8A /* DictX */;
+		activeTarget = 8DD76F620486A84900D96B5E /* DictX */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* DictX */,
+		);
+		breakpoints = (
+		);
+		breakpointsGroup = F148BBF820CB16680015F125 /* XCBreakpointsBucket */;
+		codeSenseManager = F1F5C3A220CAC47700236B8A /* Code sense */;
+		executables = (
+			F1F5C39D20CAC45600236B8A /* DictX */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 550504788;
+			PBXWorkspaceStateSaveDate = 550504788;
+		};
+		perUserProjectItems = {
+			F1AEAEC220D005D50086FFB8 = F1AEAEC220D005D50086FFB8 /* PBXBookmark */;
+			F1AEAEC320D0063A0086FFB8 = F1AEAEC320D0063A0086FFB8 /* PBXTextBookmark */;
+			F1AEAECA20D007180086FFB8 = F1AEAECA20D007180086FFB8 /* PBXTextBookmark */;
+			F1AEAECB20D007180086FFB8 = F1AEAECB20D007180086FFB8 /* PBXTextBookmark */;
+			F1F67B7720D00E340041959E /* PBXTextBookmark */ = F1F67B7720D00E340041959E /* PBXTextBookmark */;
+			F1F67B7820D00E340041959E /* PBXTextBookmark */ = F1F67B7820D00E340041959E /* PBXTextBookmark */;
+			F1F67B7C20D00F580041959E /* PBXTextBookmark */ = F1F67B7C20D00F580041959E /* PBXTextBookmark */;
+			F1F67B7D20D00F580041959E /* PBXTextBookmark */ = F1F67B7D20D00F580041959E /* PBXTextBookmark */;
+			F1F67B7F20D00FF90041959E /* PBXTextBookmark */ = F1F67B7F20D00FF90041959E /* PBXTextBookmark */;
+		};
+		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {710, 401}}";
+			sepNavSelRange = "{380, 0}";
+			sepNavVisRect = "{{0, 0}, {710, 401}}";
+			sepNavWindowFrame = "{{1, 48}, {749, 530}}";
+		};
+	};
+	8DD76F620486A84900D96B5E /* DictX */ = {
+		activeExec = 0;
+		executables = (
+			F1F5C39D20CAC45600236B8A /* DictX */,
+		);
+	};
+	C6859E8B029090EE04C91782 /* DictX.1 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {710, 1106}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {710, 401}}";
+			sepNavWindowFrame = "{{15, 43}, {749, 530}}";
+		};
+	};
+	F148BBF820CB16680015F125 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {685, 3612}}";
+			sepNavSelRange = "{4627, 0}";
+			sepNavVisRect = "{{0, 3211}, {685, 401}}";
+			sepNavWindowFrame = "{{12, 48}, {724, 530}}";
+		};
+	};
+	F148BEDC20CDCA430015F125 /* dictx.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {710, 532}}";
+			sepNavSelRange = "{773, 15}";
+			sepNavVisRect = "{{0, 131}, {710, 401}}";
+			sepNavWindowFrame = "{{15, 48}, {749, 530}}";
+		};
+	};
+	F148BFA720CED4080015F125 /* database.dictx */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {710, 401}}";
+			sepNavSelRange = "{25, 0}";
+			sepNavVisRect = "{{0, 0}, {710, 401}}";
+			sepNavWindowFrame = "{{22, 48}, {749, 530}}";
+		};
+	};
+	F1AEAEC220D005D50086FFB8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = F148BFA720CED4080015F125 /* database.dictx */;
+	};
+	F1AEAEC320D0063A0086FFB8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 230";
+		rLen = 0;
+		rLoc = 4409;
+		rType = 0;
+		vrLen = 878;
+		vrLoc = 3864;
+	};
+	F1AEAECA20D007180086FFB8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 116";
+		rLen = 0;
+		rLoc = 2268;
+		rType = 0;
+		vrLen = 487;
+		vrLoc = 1574;
+	};
+	F1AEAECB20D007180086FFB8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BFA720CED4080015F125 /* database.dictx */;
+		name = "database.dictx: 1";
+		rLen = 0;
+		rLoc = 29;
+		rType = 0;
+		vrLen = 71;
+		vrLoc = 0;
+	};
+	F1F5C39D20CAC45600236B8A /* DictX */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DictX;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	F1F5C3A120CAC47700236B8A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	F1F5C3A220CAC47700236B8A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F1F67B7720D00E340041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'stoi' was not declared in this scope";
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		rLen = 1;
+		rLoc = 237;
+		rType = 1;
+	};
+	F1F67B7820D00E340041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "id_code = stoi(key.substr(key.find(\"%\")+1));";
+		rLen = 63;
+		rLoc = 4574;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 4439;
+	};
+	F1F67B7C20D00F580041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: invalid use of undefined type 'struct std::istringstream'";
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		rLen = 1;
+		rLoc = 237;
+		rType = 1;
+	};
+	F1F67B7D20D00F580041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "istringstream(key.substr(key.find(\"%\")+1)) >> id_code;";
+		rLen = 63;
+		rLoc = 4574;
+		rType = 0;
+		vrLen = 331;
+		vrLoc = 4439;
+	};
+	F1F67B7F20D00FF90041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 238";
+		rLen = 0;
+		rLoc = 4635;
+		rType = 0;
+		vrLen = 335;
+		vrLoc = 4439;
+	};
+}
