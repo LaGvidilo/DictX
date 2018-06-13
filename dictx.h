@@ -34,5 +34,8 @@ class DictX{
 	void aff_search(const string table_name, string key);
 	void load_database(string namefile);
 	void delete_id(const string table_name, int ID);
+	void insert_from(string table_name, string key, string value);
+	void insert_from_by_id(string table_name, string key, string value, int id_code);
+	void insert_from_new(string table_name, string key, string value);
 };
 #endif

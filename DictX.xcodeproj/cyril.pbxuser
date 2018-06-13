@@ -50,6 +50,29 @@
 			F1F67B7C20D00F580041959E /* PBXTextBookmark */ = F1F67B7C20D00F580041959E /* PBXTextBookmark */;
 			F1F67B7D20D00F580041959E /* PBXTextBookmark */ = F1F67B7D20D00F580041959E /* PBXTextBookmark */;
 			F1F67B7F20D00FF90041959E /* PBXTextBookmark */ = F1F67B7F20D00FF90041959E /* PBXTextBookmark */;
+			F1F67B9620D1231A0041959E /* PBXTextBookmark */ = F1F67B9620D1231A0041959E /* PBXTextBookmark */;
+			F1F67B9720D1231A0041959E /* PBXTextBookmark */ = F1F67B9720D1231A0041959E /* PBXTextBookmark */;
+			F1F67B9820D1231A0041959E /* PBXTextBookmark */ = F1F67B9820D1231A0041959E /* PBXTextBookmark */;
+			F1F67B9920D1231A0041959E /* PBXTextBookmark */ = F1F67B9920D1231A0041959E /* PBXTextBookmark */;
+			F1F67BA820D123840041959E /* PBXTextBookmark */ = F1F67BA820D123840041959E /* PBXTextBookmark */;
+			F1F67BA920D123840041959E /* PBXTextBookmark */ = F1F67BA920D123840041959E /* PBXTextBookmark */;
+			F1F67BAA20D123840041959E /* PBXTextBookmark */ = F1F67BAA20D123840041959E /* PBXTextBookmark */;
+			F1F67BAB20D123840041959E /* PBXTextBookmark */ = F1F67BAB20D123840041959E /* PBXTextBookmark */;
+			F1F67BAC20D123840041959E /* PBXTextBookmark */ = F1F67BAC20D123840041959E /* PBXTextBookmark */;
+			F1F67BAD20D123840041959E /* PBXTextBookmark */ = F1F67BAD20D123840041959E /* PBXTextBookmark */;
+			F1F67BAE20D123840041959E /* PBXTextBookmark */ = F1F67BAE20D123840041959E /* PBXTextBookmark */;
+			F1F67BC720D124690041959E /* PBXTextBookmark */ = F1F67BC720D124690041959E /* PBXTextBookmark */;
+			F1F67BC820D124690041959E /* PBXTextBookmark */ = F1F67BC820D124690041959E /* PBXTextBookmark */;
+			F1F67BC920D124690041959E /* PBXTextBookmark */ = F1F67BC920D124690041959E /* PBXTextBookmark */;
+			F1F67BCA20D124690041959E /* PBXTextBookmark */ = F1F67BCA20D124690041959E /* PBXTextBookmark */;
+			F1F67BD020D125FC0041959E /* PBXTextBookmark */ = F1F67BD020D125FC0041959E /* PBXTextBookmark */;
+			F1F67BD520D127000041959E /* PBXTextBookmark */ = F1F67BD520D127000041959E /* PBXTextBookmark */;
+			F1F67BD720D127120041959E /* PBXTextBookmark */ = F1F67BD720D127120041959E /* PBXTextBookmark */;
+			F1F67BD920D127570041959E /* PBXTextBookmark */ = F1F67BD920D127570041959E /* PBXTextBookmark */;
+			F1F67BDD20D127920041959E /* PBXTextBookmark */ = F1F67BDD20D127920041959E /* PBXTextBookmark */;
+			F1F67BDF20D127D80041959E /* PBXTextBookmark */ = F1F67BDF20D127D80041959E /* PBXTextBookmark */;
+			F1F67BE320D1285B0041959E /* PBXTextBookmark */ = F1F67BE320D1285B0041959E /* PBXTextBookmark */;
+			F1F67BEA20D1288F0041959E /* PBXTextBookmark */ = F1F67BEA20D1288F0041959E /* PBXTextBookmark */;
 		};
 		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
 		userBuildSettings = {
@@ -57,9 +80,9 @@
 	};
 	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {710, 401}}";
-			sepNavSelRange = "{380, 0}";
-			sepNavVisRect = "{{0, 0}, {710, 401}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 434}}";
+			sepNavSelRange = "{477, 0}";
+			sepNavVisRect = "{{0, 249}, {643, 160}}";
 			sepNavWindowFrame = "{{1, 48}, {749, 530}}";
 		};
 	};
@@ -85,17 +108,17 @@
 	};
 	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {685, 3612}}";
-			sepNavSelRange = "{4627, 0}";
-			sepNavVisRect = "{{0, 3211}, {685, 401}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 4158}}";
+			sepNavSelRange = "{3303, 0}";
+			sepNavVisRect = "{{0, 2433}, {643, 160}}";
 			sepNavWindowFrame = "{{12, 48}, {724, 530}}";
 		};
 	};
 	F148BEDC20CDCA430015F125 /* dictx.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {710, 532}}";
-			sepNavSelRange = "{773, 15}";
-			sepNavVisRect = "{{0, 131}, {710, 401}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 546}}";
+			sepNavSelRange = "{915, 0}";
+			sepNavVisRect = "{{0, 386}, {643, 160}}";
 			sepNavWindowFrame = "{{15, 48}, {749, 530}}";
 		};
 	};
@@ -116,7 +139,7 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "dictx.cpp: 230";
 		rLen = 0;
-		rLoc = 4409;
+		rLoc = 5167;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 3864;
@@ -126,7 +149,7 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "dictx.cpp: 116";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2290;
 		rType = 0;
 		vrLen = 487;
 		vrLoc = 1574;
@@ -186,7 +209,7 @@
 		comments = "error: 'stoi' was not declared in this scope";
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		rLen = 1;
-		rLoc = 237;
+		rLoc = 277;
 		rType = 1;
 	};
 	F1F67B7820D00E340041959E /* PBXTextBookmark */ = {
@@ -194,7 +217,7 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "id_code = stoi(key.substr(key.find(\"%\")+1));";
 		rLen = 63;
-		rLoc = 4574;
+		rLoc = 5332;
 		rType = 0;
 		vrLen = 345;
 		vrLoc = 4439;
@@ -204,7 +227,7 @@
 		comments = "error: invalid use of undefined type 'struct std::istringstream'";
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		rLen = 1;
-		rLoc = 237;
+		rLoc = 277;
 		rType = 1;
 	};
 	F1F67B7D20D00F580041959E /* PBXTextBookmark */ = {
@@ -212,7 +235,7 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "istringstream(key.substr(key.find(\"%\")+1)) >> id_code;";
 		rLen = 63;
-		rLoc = 4574;
+		rLoc = 5332;
 		rType = 0;
 		vrLen = 331;
 		vrLoc = 4439;
@@ -222,9 +245,233 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "dictx.cpp: 238";
 		rLen = 0;
-		rLoc = 4635;
+		rLoc = 5393;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 4439;
+	};
+	F1F67B9620D1231A0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 252";
+		rLen = 0;
+		rLoc = 5393;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 4245;
+	};
+	F1F67B9720D1231A0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: no matching function for call to 'DictX::insert_from(const char [5], const char [4], const char [6], int)'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 23;
+		rType = 1;
+	};
+	F1F67B9820D1231A0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 252";
+		rLen = 0;
+		rLoc = 5393;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 4245;
+	};
+	F1F67B9920D1231A0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "DX.insert_from(\"test\", \"nom\", \"Kevin\",1);";
+		rLen = 46;
+		rLoc = 440;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 274;
+	};
+	F1F67BA820D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: insert_from";
+		rLen = 0;
+		rLoc = 3189;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 3051;
+	};
+	F1F67BA920D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDC20CDCA430015F125 /* dictx.h */;
+		name = "dictx.h: insert_from";
+		rLen = 0;
+		rLoc = 902;
+		rType = 0;
+		vrLen = 450;
+		vrLoc = 477;
+	};
+	F1F67BAA20D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: no matching function for call to 'DictX::insert_from(const char [5], const char [4], const char [7])'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 21;
+		rType = 1;
+	};
+	F1F67BAB20D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "DX.insert_from(\"test\", \"nom\", \"Kevin\",1);";
+		rLen = 46;
+		rLoc = 440;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 274;
+	};
+	F1F67BAC20D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: insert_from";
+		rLen = 0;
+		rLoc = 3189;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 3051;
+	};
+	F1F67BAD20D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDC20CDCA430015F125 /* dictx.h */;
+		name = "dictx.h: insert_from";
+		rLen = 0;
+		rLoc = 902;
+		rType = 0;
+		vrLen = 450;
+		vrLoc = 477;
+	};
+	F1F67BAE20D123840041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "DX.insert_from(\"test\", \"nom\", \"Klauss\");";
+		rLen = 47;
+		rLoc = 352;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 274;
+	};
+	F1F67BC720D124690041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 24";
+		rLen = 0;
+		rLoc = 483;
+		rType = 0;
+		vrLen = 330;
+		vrLoc = 274;
+	};
+	F1F67BC820D124690041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'next_id' was not declared in this scope";
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		rLen = 1;
+		rLoc = 184;
+		rType = 1;
+	};
+	F1F67BC920D124690041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 24";
+		rLen = 0;
+		rLoc = 483;
+		rType = 0;
+		vrLen = 330;
+		vrLoc = 274;
+	};
+	F1F67BCA20D124690041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 184";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3087;
+	};
+	F1F67BD020D125FC0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 184";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3087;
+	};
+	F1F67BD520D127000041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 184";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3087;
+	};
+	F1F67BD720D127120041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 184";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3087;
+	};
+	F1F67BD920D127570041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 185";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3112;
+	};
+	F1F67BDD20D127920041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 186";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 265;
+		vrLoc = 3112;
+	};
+	F1F67BDF20D127D80041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 186";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 265;
+		vrLoc = 3138;
+	};
+	F1F67BE320D1285B0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 187";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 242;
+		vrLoc = 3126;
+	};
+	F1F67BEA20D1288F0041959E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 185";
+		rLen = 0;
+		rLoc = 3325;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 3105;
 	};
 }

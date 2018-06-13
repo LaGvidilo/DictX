@@ -76,7 +76,8 @@ int counting(string delim)
 }
 
 void affiche_tab(map<int, string> outtab){
-	for (int ite = 0; ite < outtab.size()+1; ite++){
+	int lenout = outtab.size()+1;
+	for (int ite = 0; ite < lenout; ite++){
 		if (outtab[ite].length()>0){
 			cout << "-->OUTTAB: " << outtab[ite] << endl;
 		}
@@ -170,6 +171,45 @@ void DictX::delete_id(const string table_name, int ID){
 	{
 		if (TABLE[j].name==table_name){
 			TABLE[j].delete_from_id(ID);
+		}
+		j++;
+	}
+}
+
+void DictX::insert_from(string table_name, string key, string value){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			TABLE[j].insert(TABLE[j].get_current_id(),key,value);
+			break;
+		}
+		j++;
+	}
+}
+
+void DictX::insert_from_new(string table_name, string key, string value){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			TABLE[j].insert(TABLE[j].get_current_id()+1,key,value);
+			break;
+		}
+		j++;
+	}
+}
+
+void DictX::insert_from_by_id(string table_name, string key, string value, int id_code){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			TABLE[j].insert(id_code,key,value);
+			break;
 		}
 		j++;
 	}
