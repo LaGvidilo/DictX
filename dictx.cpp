@@ -15,7 +15,7 @@
 using namespace std;
 
 //LeftSelect
-void LRstr(char input_dict[],int distanceL,char x_in[1024],int distanceR,char y_out[1024])
+void LRstr(char input_dict[],int distanceL,char x_in[10000],int distanceR,char y_out[10000])
 {
 	long LEN_IN = strlen(input_dict);
 	long Z = 0;
@@ -84,6 +84,15 @@ void affiche_tab(map<int, string> outtab){
 	}
 }
 
+const unsigned long hash(const char *str){
+	unsigned long hash = 5381;
+	int c;
+	
+	while ((c=*str++))
+		hash = ((hash<<5)+hash)+c;
+	return hash;
+}
+
 class Table
 {
 	public:
@@ -102,11 +111,11 @@ class Table
 	}
 		
 	int get_current_id(){
-		return ID;
+		return mapData.end()->first+1;
 	}
 	
 	int get_last_id(){
-		return ID-1;
+		return mapData.end()->first;
 	}
 	
 	map <int, string> search(string cle){
@@ -174,6 +183,19 @@ void DictX::delete_id(const string table_name, int ID){
 	{
 		if (TABLE[j].name==table_name){
 			TABLE[j].delete_from_id(ID);
+		}
+		j++;
+	}
+}
+
+void DictX::drop_table(const string table_name){
+	int j=0;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			map <int, map<string, string> > mapData;
+			TABLE[j].mapData = mapData;
+			TABLE[j].name = "";
 		}
 		j++;
 	}
@@ -259,14 +281,14 @@ void DictX::load_database(string namefile){
 	{
 		lentmp += strlen(strtok(input_dict,"$"))+2;
 		if (strlen(input_dict)==4){break;}
-		printf("DELIM: %s\n", strtok(input_dict,"$"));
+		//printf("DELIM: %s\n", strtok(input_dict,"$"));
 		TABLE[j].set_name(strtok(input_dict,"$"));
-		cout << "NAME OF TABLE CREATED: " << TABLE[j].name << endl;
+		cout << "\nNAME OF TABLE CREATED: " << TABLE[j].name << endl;
 		decoupe(input_dict,input_dict2,lentmp);
-		printf("AFTER DECOUPE: %s\n\n", input_dict);
+		//printf("AFTER DECOUPE: %s\n\n", input_dict);
 	
 		lentmp += strlen(strtok(input_dict,"$"));
-		printf("--DELIM: %s\n", strtok(input_dict,"$"));
+		//printf("--DELIM: %s\n", strtok(input_dict,"$"));
 	
 		delim = input_dict;
 		n = counting(delim);
@@ -290,7 +312,7 @@ void DictX::load_database(string namefile){
 		}
 	
 		decoupe(input_dict,input_dict2,lentmp);
-		printf("--AFTER DECOUPE: %s\n\n", input_dict);
+		//printf("--AFTER DECOUPE: %s\n\n", input_dict);
 		j++;
 	}
 	

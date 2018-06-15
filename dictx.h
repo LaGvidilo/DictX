@@ -1,5 +1,5 @@
 /*
-DictX 1.2.0(One)
+DictX 1.3.1(One)
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -28,10 +28,11 @@ Version		Comment
 #include <list>
 #include <fstream>
 using namespace std;
-void LRstr(char input_dict[],int distanceL,char x_in[1024],int distanceR,char y_out[1024]);
+void LRstr(char input_dict[],int distanceL,char x_in[10000],int distanceR,char y_out[10000]);
 void decoupe(char input_dict[], char input_dict2[],int lentmp);
 int counting(string delim);
 void affiche_tab(map<int, string> outtab);
+const unsigned long hash(const char *str);
 class DictX{
 	public:
 	map <int, string> search(const string table_name, string key);
@@ -42,5 +43,6 @@ class DictX{
 	void insert_from_by_id(string table_name, string key, string value, int id_code);
 	void insert_from_new(string table_name, string key, string value);
 	void save_database(const string nom_fichier);
+	void drop_table(const string table_name);
 };
 #endif

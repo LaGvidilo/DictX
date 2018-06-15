@@ -14,7 +14,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.2.0      |" << endl;
+	cout << "|       v1.3.1      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -22,6 +22,7 @@ int main (int argc, const char * argv[]) {
 	DictX DX;
 	string nomf;
 	if (argc==1){
+		cout << "NOTE: usage is.: dictx <name_of_file>" << endl;
 		cout << "\nNom du fichier DictX:";
 		cin >> nomf;
 	}
@@ -50,6 +51,21 @@ int main (int argc, const char * argv[]) {
 		if (commande == "commit"){
 			DX.save_database(nomf);
 			DX.load_database(nomf);
+		}
+		if (commande == "drop"){
+			string table_name;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			DX.drop_table(table_name);
+		}
+		if (commande == "delete"){
+			string table_name;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			int id_code;
+			cout << "\nID:";
+			cin >> id_code;
+			DX.delete_id(table_name, id_code);
 		}
 		if (commande == "insert"){
 				string table_name;
