@@ -10,6 +10,8 @@
 #include <unistd.h>
 #undef _POSIX_SOURCE
 #include <stdio.h>
+#include <iterator>
+#include <algorithm>
 using namespace std;
 
 //LeftSelect
@@ -216,83 +218,106 @@ void DictX::insert_from_by_id(string table_name, string key, string value, int i
 }
 
 void DictX::load_database(string namefile){
-		char input_dict[10000];
-		char input_dict2[10000];
-		string line;
-		char nom_fichier[512];
-		if (getcwd(nom_fichier, sizeof(nom_fichier)) == NULL){
-			cout << "ERROR FILE PATH" << endl;
+	char input_dict[10000];
+	char input_dict2[10000];
+	string line;
+	char nom_fichier[512];
+	if (getcwd(nom_fichier, sizeof(nom_fichier)) == NULL){
+		cout << "ERROR FILE PATH" << endl;
+	}
+	else{
+		strcat(nom_fichier,"/");
+		strcat(nom_fichier,namefile.c_str());
+		printf("FICHIER SE TROUVE: %s\n",nom_fichier);
+		ifstream fichier(nom_fichier);
+		char noinp[] ="$END$\0";
+		if (fichier.is_open()){
+			while (getline(fichier,line)){
+				strcat(input_dict,line.c_str());				
+			}
+			strcpy(input_dict2,input_dict);
+			fichier.close();
 		}
 		else{
-			strcat(nom_fichier,"/");
-			strcat(nom_fichier,namefile.c_str());
-			printf("FICHIER SE TROUVE: %s\n",nom_fichier);
-			ifstream fichier(nom_fichier);
-			char noinp[] ="$END$\0";
-			if (fichier.is_open()){
-
-				while (getline(fichier,line)){
-					strcat(input_dict,line.c_str());				
-				}
-				strcpy(input_dict2,input_dict);
-				fichier.close();
-			}
-			else{
-				strcpy(input_dict,noinp);
-				strcpy(input_dict2,noinp);
-				cout << "Unable to open file\n";
-			}		
-		}
-
-		int lentmp=0;
-
-		
-		int j=0;
-		int i=0;
-		string delim;
-		string key;
-		string value;
-		int n;
-		cout << "LOAD THE DB..." << endl;
-		map <int, string> outtab;
-		while (j<512)
-		{
-			lentmp += strlen(strtok(input_dict,"$"))+2;
-			if (strlen(input_dict)==4){break;}
-			printf("DELIM: %s\n", strtok(input_dict,"$"));
-			TABLE[j].set_name(strtok(input_dict,"$"));
-			cout << "NAME OF TABLE CREATED: " << TABLE[j].name << endl;
-
-			decoupe(input_dict,input_dict2,lentmp);
-			printf("AFTER DECOUPE: %s\n\n", input_dict);
-		
-			lentmp += strlen(strtok(input_dict,"$"));
-			printf("--DELIM: %s\n", strtok(input_dict,"$"));
-		
-			delim = input_dict;
-			n = counting(delim);
-			int id_code;
-			for (i=0; i<n+1; i++){
-				
-				key = delim.substr(0,delim.find(":"));
-				sscanf(key.substr(key.find("%")+1).c_str(),"%d",&id_code);
-				key = delim.substr(0,key.find("%"));
-				value = delim.substr(delim.find(":")+1);
-				value = value.substr(0,value.find(","));
+			strcpy(input_dict,noinp);
+			strcpy(input_dict2,noinp);
+			cout << "Unable to open file\n";
+		}		
+	}
+	int lentmp=0;
+	
+	int j=0;
+	int i=0;
+	string delim;
+	string key;
+	string value;
+	int n;
+	cout << "LOAD THE DB..." << endl;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		lentmp += strlen(strtok(input_dict,"$"))+2;
+		if (strlen(input_dict)==4){break;}
+		printf("DELIM: %s\n", strtok(input_dict,"$"));
+		TABLE[j].set_name(strtok(input_dict,"$"));
+		cout << "NAME OF TABLE CREATED: " << TABLE[j].name << endl;
+		decoupe(input_dict,input_dict2,lentmp);
+		printf("AFTER DECOUPE: %s\n\n", input_dict);
+	
+		lentmp += strlen(strtok(input_dict,"$"));
+		printf("--DELIM: %s\n", strtok(input_dict,"$"));
+	
+		delim = input_dict;
+		n = counting(delim);
+		int id_code;
+		for (i=0; i<n+1; i++){
 			
+			key = delim.substr(0,delim.find(":"));
+			sscanf(key.substr(key.find("%")+1).c_str(),"%d",&id_code);
+			key = delim.substr(0,key.find("%"));
+			value = delim.substr(delim.find(":")+1);
+			value = value.substr(0,value.find(","));
+		
+			if (key!="") {
 				TABLE[j].insert(id_code,key,value);
 				cout << "---+KEY: " << key << endl;
 				cout << "---+VALUE: " << value << endl;
-				delim = delim.substr(delim.find(",")+1);
-
-		
+				
 			}
-		
-			decoupe(input_dict,input_dict2,lentmp);
-			printf("--AFTER DECOUPE: %s\n\n", input_dict);
-			j++;
+			
+			delim = delim.substr(delim.find(",")+1);
 		}
-		
-		cout << "--DATABASE LOADED--" << endl;
-		
+	
+		decoupe(input_dict,input_dict2,lentmp);
+		printf("--AFTER DECOUPE: %s\n\n", input_dict);
+		j++;
 	}
+	
+	cout << "--DATABASE LOADED--" << endl;	
+}
+
+void DictX::save_database(const string nom_fichier){
+	ofstream fichier;
+	fichier.open(nom_fichier.c_str());
+	int j=0;
+	while (j<512)
+	{
+		if (TABLE[j].name!=""){
+			fichier << "$" << TABLE[j].name << "$";
+			map <int, map<string, string> >::iterator it;
+
+			int key = 0;
+			for (it = TABLE[j].mapData.begin(); it != TABLE[j].mapData.end(); ++it){
+			
+				map<string, string> mapit2 = it->second;
+				for (map<string, string>::const_iterator it2 = mapit2.begin();  it2 != mapit2.end(); ++it2){
+					fichier << (*it2).first << "%" << key << ":" << (*it2).second << ",";
+				}
+				key++;
+			}
+		}
+		j++;
+	}
+	fichier << "$END$";
+	fichier.close();
+}

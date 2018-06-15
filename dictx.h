@@ -37,5 +37,6 @@ class DictX{
 	void insert_from(string table_name, string key, string value);
 	void insert_from_by_id(string table_name, string key, string value, int id_code);
 	void insert_from_new(string table_name, string key, string value);
+	void save_database(const string nom_fichier);
 };
 #endif
