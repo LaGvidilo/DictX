@@ -1,5 +1,5 @@
 /*
-DictX 1.0
+DictX 1.2.0(One)
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -8,8 +8,12 @@ On a iMac G3 500Mhz with 256Mb of RAM
 /*
 Release notes:
 Version		Comment
-  1.0		  First version
-  1.1		  Load/Write a file (dictx)
+  1.0			First version
+  1.1			Load/Write a file (dictx)
+  1.2			Terminal de requete DictX
+  1.3			Delete from id & Drop table
+  1.3.1			Get id
+  1.4.0			Update
 
 */
 #ifndef DICTX_H

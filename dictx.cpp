@@ -78,11 +78,9 @@ int counting(string delim)
 }
 
 void affiche_tab(map<int, string> outtab){
-	int lenout = outtab.size()+1;
-	for (int ite = 0; ite < lenout; ite++){
-		if (outtab[ite].length()>0){
-			cout << "-->OUTTAB: " << outtab[ite] << endl;
-		}
+	map <int, string>::iterator it;
+	for (it=outtab.begin(); it!=outtab.end(); ++it){
+		cout << "---ID:" << it->first << " ; VALUE:" << it->second << endl;
 	}
 }
 
@@ -113,10 +111,13 @@ class Table
 	
 	map <int, string> search(string cle){
 		map <int, string> tableau;
-		for (int i=0; i<=ID; i++){
-			if (mapData[i].count(cle) > 0){
-				cout << "ID: " << i << " DATA: " << mapData[i][cle] << endl;
-				tableau.insert(pair<int,string> (i,mapData[i][cle]));
+		map <int, map<string, string> >::iterator it;
+		for (it=mapData.begin(); it!=mapData.end(); ++it){
+			map<string, string> mapit2 = it->second;
+			for (map<string, string>::const_iterator it2 = mapit2.begin();  it2 != mapit2.end(); ++it2){
+				 if ((*it2).first==cle){
+					tableau.insert(pair<int,string> (it->first, (*it2).second));
+				 }
 			}
 		} 
 		return tableau;

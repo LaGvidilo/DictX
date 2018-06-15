@@ -11,25 +11,69 @@ using namespace std;
 
 
 int main (int argc, const char * argv[]) {	
-	/*long exp;
-	exp = 0;
-	printf("EXP:");
-	scanf("%ld",&exp);
-	exp++;
-	printf("%ld",exp);*/
+	
+	cout << "*===================*" << endl;
+	cout << "|   DictX Terminal  |" << endl;
+	cout << "|       v1.2.0      |" << endl;
+	cout << "|  By Rick Sanchez  |" << endl;
+	cout << "|       D-634       |" << endl;
+	cout << "*===================*" << endl;
+	
 	DictX DX;
-	DX.load_database("database.dictx");
-	DX.insert_from_new("test", "name", "Klauss");
-	DX.insert_from("test", "code", "5588");
-	DX.insert_from_new("test", "name", "Kevin");
-	DX.insert_from("test", "code", "774589");
-	DX.insert_from_new("test", "name", "Germain");
-	DX.insert_from("test", "code", "412304");
-	DX.aff_search("test","name");
-	DX.aff_search("test","code");
-	DX.aff_search("test","name");
-	DX.save_database("database.dictx");
-
+	string nomf;
+	if (argc==1){
+		cout << "\nNom du fichier DictX:";
+		cin >> nomf;
+	}
+	else {
+		nomf=argv[1];
+	}
+	DX.load_database(nomf);
+	
+	string commande="";	
+	while (commande!="exit"){
+		cout << "\nDictX(" << nomf << ")>";
+		cin >> commande;
+	
+		if (commande == "search"){
+			string table_name;
+			string key_name;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			cout << "\nKEY NAME:";
+			cin >> key_name;
+			DX.aff_search(table_name,key_name);
+		}
+		if (commande == "exit"){
+			break;
+		}
+		if (commande == "commit"){
+			DX.save_database(nomf);
+			DX.load_database(nomf);
+		}
+		if (commande == "insert"){
+				string table_name;
+				string key_name;
+				string value;
+				cout << "\nTABLE NAME:";
+				cin >> table_name;
+				string recur="START";
+				while (recur!="no" || recur=="yes"){
+					cout << "\nKEY NAME:";
+					cin >> key_name;
+					cout << "\nVALUE:";
+					cin >> value;
+					if (recur=="START"){
+						DX.insert_from_new(table_name,key_name,value);
+					}
+					else {
+						DX.insert_from(table_name,key_name,value);
+					}
+					cout << "\nCONTINUE?(yes/no):";
+					cin >> recur;
+				}
+		}
+	}
 			
     return 0;
 }
