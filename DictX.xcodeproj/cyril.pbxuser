@@ -75,6 +75,11 @@
 			F1C0299D20D3917A00D0DB95 /* PBXTextBookmark */ = F1C0299D20D3917A00D0DB95 /* PBXTextBookmark */;
 			F1C0299E20D3917A00D0DB95 /* PBXTextBookmark */ = F1C0299E20D3917A00D0DB95 /* PBXTextBookmark */;
 			F1C029AC20D394AA00D0DB95 /* PBXTextBookmark */ = F1C029AC20D394AA00D0DB95 /* PBXTextBookmark */;
+			F1C029B220D3950200D0DB95 /* PBXTextBookmark */ = F1C029B220D3950200D0DB95 /* PBXTextBookmark */;
+			F1C029B920D43FAA00D0DB95 /* PBXTextBookmark */ = F1C029B920D43FAA00D0DB95 /* PBXTextBookmark */;
+			F1C029BA20D43FAA00D0DB95 /* PBXTextBookmark */ = F1C029BA20D43FAA00D0DB95 /* PBXTextBookmark */;
+			F1C029CC20D4400A00D0DB95 /* PBXTextBookmark */ = F1C029CC20D4400A00D0DB95 /* PBXTextBookmark */;
+			F1C029ED20D4443600D0DB95 /* PBXTextBookmark */ = F1C029ED20D4443600D0DB95 /* PBXTextBookmark */;
 		};
 		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
 		userBuildSettings = {
@@ -110,9 +115,9 @@
 	};
 	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {668, 4858}}";
-			sepNavSelRange = "{2231, 0}";
-			sepNavVisRect = "{{0, 1509}, {643, 160}}";
+			sepNavIntBoundsRect = "{{0, 0}, {668, 5194}}";
+			sepNavSelRange = "{3230, 74}";
+			sepNavVisRect = "{{0, 2209}, {643, 160}}";
 			sepNavWindowFrame = "{{67, 48}, {724, 530}}";
 		};
 	};
@@ -141,7 +146,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 52";
 		rLen = 0;
-		rLoc = 1119;
+		rLoc = 1121;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 0;
@@ -155,7 +160,7 @@
 		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
 		name = "dictx.cpp: 264";
 		rLen = 0;
-		rLoc = 5512;
+		rLoc = 6218;
 		rType = 0;
 		vrLen = 701;
 		vrLoc = 4734;
@@ -235,6 +240,54 @@
 		rType = 0;
 		vrLen = 217;
 		vrLoc = 2077;
+	};
+	F1C029B220D3950200D0DB95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 114";
+		rLen = 0;
+		rLoc = 2231;
+		rType = 0;
+		vrLen = 217;
+		vrLoc = 2077;
+	};
+	F1C029B920D43FAA00D0DB95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: prototype for 'void DictX::aff_search(std::string, std::string, std::string)' does not match any in class 'DictX'";
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		rLen = 1;
+		rLoc = 163;
+		rType = 1;
+	};
+	F1C029BA20D43FAA00D0DB95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "void DictX::aff_search(const string table_name, string key,string value){";
+		rLen = 84;
+		rLoc = 3231;
+		rType = 0;
+		vrLen = 205;
+		vrLoc = 3205;
+	};
+	F1C029CC20D4400A00D0DB95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: update";
+		rLen = 0;
+		rLoc = 3249;
+		rType = 0;
+		vrLen = 201;
+		vrLoc = 3205;
+	};
+	F1C029ED20D4443600D0DB95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: update";
+		rLen = 0;
+		rLoc = 3249;
+		rType = 0;
+		vrLen = 215;
+		vrLoc = 3206;
 	};
 	F1F5C39D20CAC45600236B8A /* DictX */ = {
 		isa = PBXExecutable;

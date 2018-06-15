@@ -14,7 +14,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.3.1      |" << endl;
+	cout << "|       v1.4.0      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -50,7 +50,7 @@ int main (int argc, const char * argv[]) {
 		}
 		if (commande == "commit"){
 			DX.save_database(nomf);
-			DX.load_database(nomf);
+			//DX.load_database(nomf);
 		}
 		if (commande == "drop"){
 			string table_name;
@@ -88,6 +88,21 @@ int main (int argc, const char * argv[]) {
 					cout << "\nCONTINUE?(yes/no):";
 					cin >> recur;
 				}
+		}
+		if (commande == "update"){
+			string table_name;
+			string key_name;
+			int ID;
+			string value;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			cout << "\nID:";
+			cin >> ID;
+			cout << "\nKEY NAME:";
+			cin >> key_name;
+			cout << "\nVALUE:";
+			cin >> value;
+			DX.update(ID, table_name, key_name, value);
 		}
 	}
 			

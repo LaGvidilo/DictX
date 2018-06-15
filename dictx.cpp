@@ -131,6 +131,19 @@ class Table
 		} 
 		return tableau;
 	}
+	
+	void update(int ID, string cle, string value){
+		map <int, map<string, string> >::iterator it;
+		for (it=mapData.begin(); it!=mapData.end(); ++it){
+			map<string, string> mapit2 = it->second;
+			for (map<string, string>::const_iterator it2 = mapit2.begin();  it2 != mapit2.end(); ++it2){
+				 if ((*it2).first==cle){
+					mapData[ID][cle] = value; 
+				 }
+			}
+		} 
+	}
+
 
 	void set_name(string nom){
 		name=nom;
@@ -148,6 +161,19 @@ class Table
 
 Table TABLE[512];
 
+void DictX::update(const int ID, const string table_name, string key,string value){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			//UPDATE CODE
+			cout << "UPDATE FOR ID(" << ID << ") KEY(" << key << ") VALUE(" << value <<")" << endl;
+			TABLE[j].update(ID, key, value);
+		}
+		j++;
+	}
+}
 
 map <int, string> DictX::search(const string table_name, string key){
 	int j=0;
