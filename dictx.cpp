@@ -15,7 +15,7 @@
 using namespace std;
 
 //LeftSelect
-void LRstr(char input_dict[],int distanceL,char x_in[10000],int distanceR,char y_out[10000])
+void LRstr(char input_dict[],int distanceL,char x_in[100000],int distanceR,char y_out[100000])
 {
 	long LEN_IN = strlen(input_dict);
 	long Z = 0;
@@ -104,7 +104,13 @@ class Table
 		mapData[id_cur][cle] = value;
 		ID = id_cur;
 	}	
-
+	
+	//void create(string table_name){
+	//	cout << "CREATE TABLE: "<< table_name <<endl;
+	//	mapData[mapData.end()->first+1].name = table_name;
+	//	ID = 0;
+	//}
+	
 	void delete_from_id(int id){
 		cout << "ERASE FROM ID: " << id << endl;
 		mapData.erase(id);
@@ -160,6 +166,21 @@ class Table
 
 
 Table TABLE[512];
+
+void DictX::create_table(const string table_name){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==""){
+			cout << "\nCREATE TABLE: "<< table_name <<endl;
+			TABLE[j].name = table_name;
+			break;
+		}
+		j++;
+	}
+}
+
 
 void DictX::update(const int ID, const string table_name, string key,string value){
 	int j=0;
@@ -229,7 +250,7 @@ void DictX::drop_table(const string table_name){
 
 void DictX::insert_from(string table_name, string key, string value){
 	int j=0;
-	map <int, string> outtab;
+	//map <int, string> outtab;
 	while (j<512)
 	{
 		if (TABLE[j].name==table_name){
@@ -238,6 +259,7 @@ void DictX::insert_from(string table_name, string key, string value){
 		}
 		j++;
 	}
+	
 }
 
 void DictX::insert_from_new(string table_name, string key, string value){
@@ -266,9 +288,11 @@ void DictX::insert_from_by_id(string table_name, string key, string value, int i
 	}
 }
 
+
+
 void DictX::load_database(string namefile){
-	char input_dict[10000];
-	char input_dict2[10000];
+	char input_dict[100000];
+	char input_dict2[100000];
 	string line;
 	char nom_fichier[512];
 	if (getcwd(nom_fichier, sizeof(nom_fichier)) == NULL){

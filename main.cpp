@@ -14,7 +14,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.4.0      |" << endl;
+	cout << "|       v1.4.1      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -104,6 +104,25 @@ int main (int argc, const char * argv[]) {
 			cin >> value;
 			DX.update(ID, table_name, key_name, value);
 		}
+		if (commande == "create"){
+			string table_name;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			DX.create_table(table_name);
+		}
+		/*if (commande == "select"){
+			string table_name;
+			string key_name;
+			int ID;
+			string value;
+			cout << "\nTABLE NAME:";
+			cin >> table_name;
+			cout << "\nID:";
+			cin >> ID;
+			cout << "\nKEYS NAMES(separator: ','):";
+			cin >> key_name;
+		
+		}*/
 	}
 			
     return 0;

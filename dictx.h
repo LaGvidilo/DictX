@@ -1,5 +1,5 @@
 /*
-DictX 1.4.0(One)
+DictX 1.4.1(One)
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -45,5 +45,6 @@ class DictX{
 	void save_database(const string nom_fichier);
 	void drop_table(const string table_name);
 	void update(const int ID, const string table_name, string key,string value);
+	void create_table(const string table_name);
 };
 #endif
