@@ -59,14 +59,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 550924984;
-			PBXWorkspaceStateSaveDate = 550924984;
-		};
-		perUserProjectItems = {
-			F1AD920720D67647002DD83A /* PBXTextBookmark */ = F1AD920720D67647002DD83A /* PBXTextBookmark */;
-			F1AD920820D67647002DD83A /* PBXTextBookmark */ = F1AD920820D67647002DD83A /* PBXTextBookmark */;
-			F1C02A6820D506FD00D0DB95 /* PBXTextBookmark */ = F1C02A6820D506FD00D0DB95 /* PBXTextBookmark */;
-			F1C02A6C20D506FD00D0DB95 /* PBXTextBookmark */ = F1C02A6C20D506FD00D0DB95 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 551134303;
+			PBXWorkspaceStateSaveDate = 551134303;
 		};
 		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
 		userBuildSettings = {
@@ -76,7 +70,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {709, 1820}}";
 			sepNavSelRange = "{2401, 0}";
-			sepNavVisRect = "{{0, 1266}, {709, 400}}";
+			sepNavVisRect = "{{0, 1347}, {709, 400}}";
 			sepNavWindowFrame = "{{48, 49}, {748, 529}}";
 		};
 	};
@@ -102,17 +96,17 @@
 	};
 	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {685, 5558}}";
-			sepNavSelRange = "{393, 0}";
-			sepNavVisRect = "{{0, 0}, {685, 401}}";
+			sepNavIntBoundsRect = "{{0, 0}, {685, 5614}}";
+			sepNavSelRange = "{1578, 0}";
+			sepNavVisRect = "{{0, 2312}, {685, 401}}";
 			sepNavWindowFrame = "{{67, 48}, {724, 530}}";
 		};
 	};
 	F148BEDC20CDCA430015F125 /* dictx.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {710, 700}}";
-			sepNavSelRange = "{1410, 0}";
-			sepNavVisRect = "{{0, 299}, {710, 401}}";
+			sepNavSelRange = "{453, 0}";
+			sepNavVisRect = "{{0, 0}, {710, 401}}";
 			sepNavWindowFrame = "{{15, 48}, {749, 530}}";
 		};
 	};
@@ -123,46 +117,6 @@
 			sepNavVisRect = "{{0, 0}, {710, 401}}";
 			sepNavWindowFrame = "{{49, 48}, {749, 530}}";
 		};
-	};
-	F1AD920720D67647002DD83A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
-		name = "main.cpp: 110";
-		rLen = 0;
-		rLoc = 2401;
-		rType = 0;
-		vrLen = 612;
-		vrLoc = 1977;
-	};
-	F1AD920820D67647002DD83A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F148BEDC20CDCA430015F125 /* dictx.h */;
-		name = "dictx.h: create_table";
-		rLen = 0;
-		rLoc = 1410;
-		rType = 0;
-		vrLen = 1105;
-		vrLoc = 327;
-	};
-	F1C02A6820D506FD00D0DB95 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
-		name = "main.cpp: 110";
-		rLen = 0;
-		rLoc = 2401;
-		rType = 0;
-		vrLen = 612;
-		vrLoc = 1977;
-	};
-	F1C02A6C20D506FD00D0DB95 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F148BEDC20CDCA430015F125 /* dictx.h */;
-		name = "dictx.h: create_table";
-		rLen = 0;
-		rLoc = 1410;
-		rType = 0;
-		vrLen = 1105;
-		vrLoc = 327;
 	};
 	F1F5C39D20CAC45600236B8A /* DictX */ = {
 		isa = PBXExecutable;
