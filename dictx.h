@@ -1,5 +1,5 @@
 /*
-DictX 1.4.1(One)
+DictX 1.5.0
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -23,7 +23,6 @@ Version		Comment
 #include <stdio.h>
 #include <string>
 #include <math.h>
-#include <sqlite3.h>
 #include <map>
 #include <list>
 #include <fstream>

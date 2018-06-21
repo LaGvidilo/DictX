@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string>
 #include <math.h>
-#include <sqlite3.h>
 #include <map>
 #include <list>
 #include "dictx.h"

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <math.h>
-#include <sqlite3.h>
 #include <map>
 #include <list>
 #include "dictx.h"
@@ -13,6 +12,8 @@
 #include <iterator>
 #include <algorithm>
 using namespace std;
+
+
 
 //LeftSelect
 void LRstr(char input_dict[],int distanceL,char x_in[100000],int distanceR,char y_out[100000])
@@ -82,6 +83,7 @@ void affiche_tab(map<int, string> outtab){
 	for (it=outtab.begin(); it!=outtab.end(); ++it){
 		cout << "---ID:" << it->first << " ; VALUE:" << it->second << endl;
 	}
+
 }
 
 const unsigned long hash(const char *str){
