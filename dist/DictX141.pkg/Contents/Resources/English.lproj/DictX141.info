@@ -1,0 +1,20 @@
+Title DictX 1.4 & icv 1.0.1
+Version 
+Description DictX 1.4(One) And Informabox Control Version(icv) 1.0.1
+Invented By Rick Sanchez
+In 2018
+On a iMac G3 500Mhz with 256Mb of RAM
+DefaultLocation /opt/local/bin/
+DeleteWarning 
+
+### Package Flags
+
+NeedsAuthorization YES
+Required NO
+Relocatable NO
+RequiresReboot NO
+UseUserMask NO
+OverwritePermissions NO
+InstallFat NO
+RootVolumeOnly NO
+OnlyUpdateInstalledLanguages NO

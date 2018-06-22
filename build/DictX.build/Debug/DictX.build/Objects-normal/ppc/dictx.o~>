@@ -1,0 +1,3 @@
+/Users/cyril/DictX/dictx.h:38: error: expected ';' before 'void'
+/Users/cyril/DictX/dictx.cpp:186: error: no 'void DictX::delete_rel(std::string, std::string)' member function declared in class 'DictX'
+/Users/cyril/DictX/dictx.cpp:199: error: no 'void DictX::create_rel(std::string, std::string, std::string)' member function declared in class 'DictX'

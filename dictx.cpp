@@ -11,6 +11,10 @@
 #include <stdio.h>
 #include <iterator>
 #include <algorithm>
+#include <sstream>
+
+#include "md5.h"
+#include "base64.h"
 using namespace std;
 
 
@@ -100,6 +104,16 @@ class Table
 	public:
  	string name;
 	map <int, map<string, string> > mapData;
+	map <string, string> mapRel;
+	
+	void create_relation(string name, string rel){
+		mapRel[name] = rel;
+	}
+	
+	void delete_relation(string name){
+		mapRel.erase(name);
+	}
+	
 	int ID;
 	void insert(int id_cur, string cle, string value){
 		cout << "INSERT: ID(" << id_cur << ") KEY(" << cle << ") VALUE(" << value << ")" <<endl;
@@ -168,6 +182,32 @@ class Table
 
 
 Table TABLE[512];
+
+void DictX::delete_rel(string origin_table, string name){
+	int j=0;
+	while (j<512)
+	{
+		if (TABLE[j].name==origin_table){
+			TABLE[j].delete_relation(name);
+			cout << "DELETE RELATION(" << name << ")" << endl;
+			break;
+		}
+		j++;
+	}
+}
+
+void DictX::create_rel(string origin_table, string name, string rel){
+	int j=0;
+	while (j<512)
+	{
+		if (TABLE[j].name==origin_table){
+			TABLE[j].create_relation(name, rel);
+			cout << "CREATE RELATION(" << name << "): " << rel << endl;
+			break;
+		}
+		j++;
+	}
+}
 
 void DictX::create_table(const string table_name){
 	int j=0;
@@ -300,6 +340,7 @@ void DictX::load_database(string namefile){
 	char input_dict[100000];
 	char input_dict2[100000];
 	string line;
+	string RELATIONS;
 	char nom_fichier[512];
 	if (getcwd(nom_fichier, sizeof(nom_fichier)) == NULL){
 		cout << "ERROR FILE PATH" << endl;
@@ -312,7 +353,15 @@ void DictX::load_database(string namefile){
 		char noinp[] ="$END$\0";
 		if (fichier.is_open()){
 			while (getline(fichier,line)){
-				strcat(input_dict,line.c_str());				
+				size_t foundrel = line.find("#RELD#");
+				if (foundrel!=string::npos){
+					cout << "RELD IS HERE: " << line.substr(line.find("#RELD#")+6,line.find("#ENDREL#")-6) << endl;
+					RELATIONS = line.substr(line.find("#RELD#")+6,line.find("#ENDREL#")-6);
+				}
+				else
+				{
+					strcat(input_dict,line.c_str());	
+				}
 			}
 			strcpy(input_dict2,input_dict);
 			fichier.close();
@@ -371,6 +420,32 @@ void DictX::load_database(string namefile){
 		//printf("--AFTER DECOUPE: %s\n\n", input_dict);
 		j++;
 	}
+	while (RELATIONS.find(";")<RELATIONS.length()){
+		size_t foundrel = RELATIONS.find(":");
+		if (foundrel!=string::npos){
+			string namerel = RELATIONS.substr(0,RELATIONS.find(":"));
+			string datarel = RELATIONS.substr(RELATIONS.find(":")+1,RELATIONS.find(";")-2);
+			if (datarel.find(";")!=string::npos){
+				datarel = datarel.substr(0,datarel.find(";"));
+			}
+			cout << "namerel: " << namerel << endl << "datarel: " << datarel << endl;
+			RELATIONS = RELATIONS.substr(RELATIONS.find(";")+1);
+			
+			string origin_table = datarel.substr(0,datarel.find("$"));
+			
+			int j=0;
+			while (j<512)
+			{
+				if (TABLE[j].name==origin_table){
+					TABLE[j].create_relation(namerel, datarel);
+					cout << "CREATE RELATION(" << namerel << "): " << datarel << endl;
+					break;
+				}
+				j++;
+			}			
+			
+		}
+	}
 	
 	cout << "--DATABASE LOADED--" << endl;	
 }
@@ -379,15 +454,20 @@ void DictX::save_database(const string nom_fichier){
 	ofstream fichier;
 	fichier.open(nom_fichier.c_str());
 	int j=0;
+	string ss1;
 	while (j<512)
 	{
 		if (TABLE[j].name!=""){
 			fichier << "$" << TABLE[j].name << "$";
 			map <int, map<string, string> >::iterator it;
-
+			
+			for (map<string,string>::iterator itrel=TABLE[j].mapRel.begin(); itrel!=TABLE[j].mapRel.end(); ++itrel){
+				ss1 = ss1 + (*itrel).first + ":" + (*itrel).second + ";";
+				cout << "REL:: " << (*itrel).first << ":" << (*itrel).second << endl;
+			} 
+			
 			int key = 0;
 			for (it = TABLE[j].mapData.begin(); it != TABLE[j].mapData.end(); ++it){
-			
 				map<string, string> mapit2 = it->second;
 				for (map<string, string>::const_iterator it2 = mapit2.begin();  it2 != mapit2.end(); ++it2){
 					fichier << (*it2).first << "%" << key << ":" << (*it2).second << ",";
@@ -398,5 +478,8 @@ void DictX::save_database(const string nom_fichier){
 		j++;
 	}
 	fichier << "$END$";
+	fichier << "\n#RELD#";
+	fichier << ss1;
+	fichier << "#ENDREL#";
 	fichier.close();
 }

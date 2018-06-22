@@ -34,6 +34,8 @@ void affiche_tab(map<int, string> outtab);
 const unsigned long hash(const char *str);
 class DictX{
 	public:
+	void delete_rel(string origin_table, string name);
+	void create_rel(string origin_table, string name, string rel);
 	map <int, string> search(const string table_name, string key);
 	void aff_search(const string table_name, string key);
 	void load_database(string namefile);

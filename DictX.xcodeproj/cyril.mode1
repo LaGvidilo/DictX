@@ -190,6 +190,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>F1AFFF9F20DC353800A58066</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>dictx.cpp</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>F1AFFFA020DC353800A58066</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>dictx.cpp</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>F1AF006020DCC3C000A58066</string>
+						<key>history</key>
+						<array>
+							<string>F1AF005F20DCC3C000A58066</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {724, 433}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>16 104 724 474 0 0 800 578 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>F1AFFF9820DC353800A58066</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>main.cpp</string>
@@ -204,10 +244,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>F1AFFF9A20DC353800A58066</string>
+						<string>F1AF006120DCC3C000A58066</string>
 						<key>history</key>
 						<array>
-							<string>F1AFFF9320DC352700A58066</string>
+							<string>F1AF005C20DCC34D00A58066</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -244,10 +284,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>F1AFFF9E20DC353800A58066</string>
+						<string>F1AF006220DCC3C000A58066</string>
 						<key>history</key>
 						<array>
-							<string>F1AFFF9D20DC353800A58066</string>
+							<string>F1AF005820DCC34100A58066</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -270,24 +310,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>F1AFFF9F20DC353800A58066</string>
+				<string>F1AF004620DCC29300A58066</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>dictx.cpp</string>
+				<string>base64.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>F1AFFFA020DC353800A58066</string>
+						<string>F1AF004720DCC29300A58066</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>dictx.cpp</string>
+						<string>base64.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>F1AFFFA220DC353800A58066</string>
+						<string>F1AF006320DCC3C000A58066</string>
 						<key>history</key>
 						<array>
-							<string>F1AFFFA120DC353800A58066</string>
+							<string>F1AF003B20DCC26200A58066</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -299,11 +339,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {724, 433}}</string>
+				<string>{{0, 20}, {748, 432}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>67 104 724 474 0 0 800 578 </string>
+				<string>15 100 748 473 0 0 800 578 </string>
 			</dict>
 		</dict>
 	</array>
@@ -625,12 +665,18 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>F148BBDD20CB13EA0015F125</string>
-		<string>F1AFFF9F20DC353800A58066</string>
+		<string>F1AFFFFB20DC99C000A58066</string>
+		<string>F1AFFFFC20DC99C000A58066</string>
+		<string>F148BC0E20CB16D60015F125</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>F1AFFFEB20DC984F00A58066</string>
+		<string>F1AF004620DCC29300A58066</string>
 		<string>F1AFFF9B20DC353800A58066</string>
-		<string>/Users/cyril/DictX/DictX.xcodeproj</string>
+		<string>F148BBDD20CB13EA0015F125</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>F1AFFF9820DC353800A58066</string>
+		<string>F1AFFF9F20DC353800A58066</string>
+		<string>/Users/cyril/DictX/DictX.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>78 139 690 397 0 0 800 578 </string>
@@ -654,7 +700,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>dictx.cpp</string>
+								<string>main.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -754,8 +800,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {306, 200}}</string>
-											<string>{{306, 0}, {388, 200}}</string>
+											<string>{{0, 0}, {305, 200}}</string>
+											<string>{{305, 0}, {389, 200}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -818,14 +864,14 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>F1C028DF20D352C200D0DB95</string>
+				<string>F1AFFFE520DC984F00A58066</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>F1C028E020D352C200D0DB95</string>
-				<string>F1C028E120D352C200D0DB95</string>
-				<string>F1C028E220D352C200D0DB95</string>
-				<string>F1C028E320D352C200D0DB95</string>
-				<string>F1C028E420D352C200D0DB95</string>
-				<string>F1C028E520D352C200D0DB95</string>
+				<string>F1AFFFE620DC984F00A58066</string>
+				<string>F1AFFFE720DC984F00A58066</string>
+				<string>F1AFFFE820DC984F00A58066</string>
+				<string>F1AFFFE920DC984F00A58066</string>
+				<string>F1AFFFEA20DC984F00A58066</string>
+				<string>F1AFFFEB20DC984F00A58066</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debug</string>
@@ -987,7 +1033,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>F148BC0E20CB16D60015F125</string>
-				<string>F1C028E620D352C200D0DB95</string>
+				<string>F1AFFFEC20DC984F00A58066</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>WindowString</key>
@@ -1093,7 +1139,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.4.1      |" << endl;
+	cout << "|       v1.5.0      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -108,6 +108,39 @@ int main (int argc, const char * argv[]) {
 			cout << "\nTABLE NAME:";
 			cin >> table_name;
 			DX.create_table(table_name);
+		}
+		if (commande == "rule-add"){
+			string rel_name;
+			cout << "\nRELATION NAME:";
+			cin >> rel_name;
+			
+			string table_name1;
+			cout << "\nTABLE NAME(source):";
+			cin >> table_name1;
+
+			string key1;
+			cout << "\nKEY(source):";
+			cin >> key1;
+			
+			string table_name2;
+			cout << "\nTABLE NAME(target):";
+			cin >> table_name2;
+			
+			string key2;
+			cout << "\nKEY(target):";
+			cin >> key2;	
+			
+			string REL = table_name1+"$"+key1+"$"+table_name2+"$"+key2;
+			DX.create_rel(table_name1, rel_name, REL);
+		}
+		if (commande == "rule-del"){
+			string rel_name;
+			cout << "\nRELATION NAME:";
+			cin >> rel_name;
+			string table_name1;
+			cout << "\nTABLE NAME(source):";
+			cin >> table_name1;
+			DX.delete_rel(table_name1, rel_name);
 		}
 		/*if (commande == "select"){
 			string table_name;

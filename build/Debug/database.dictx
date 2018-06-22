@@ -1,1 +1,2 @@
-$test2$code%0:25,name%0:Jean,name%1:Richard,$test$name%0:cyril,$END$
+$test2$code%0:25,name%0:Jean,name%1:Richard,$test$name%0:cyril,$toto$name%0:coco,code%1:4893,code%2:00125,datetime%2:<datetime>,name%2:hopi,$END$
+#RELD#b:test2$name$test$name;a:test$code$test2$code;frand:toto$code$test2$code;#ENDREL#
