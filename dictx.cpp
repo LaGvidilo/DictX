@@ -105,6 +105,16 @@ class Table
  	string name;
 	map <int, map<string, string> > mapData;
 	map <string, string> mapRel;
+	map<string, string> mapStruct;
+	
+	void create_struct(string key, string value){
+		mapStruct[key] = value;
+		cout << "mapStruct: " << key << "::"<<value<<endl;
+	}
+	
+	map <string, string> get_struct(){
+		return mapStruct;
+	}
 	
 	void create_relation(string name, string rel){
 		mapRel[name] = rel;
@@ -203,6 +213,21 @@ void DictX::create_rel(string origin_table, string name, string rel){
 		if (TABLE[j].name==origin_table){
 			TABLE[j].create_relation(name, rel);
 			cout << "CREATE RELATION(" << name << "): " << rel << endl;
+			break;
+		}
+		j++;
+	}
+}
+
+void DictX::create_struct(string origin_table, string key, string value){
+	
+	int j=0;
+	while (j<512)
+	{
+		//if (TABLE[j].name!=""){cout << "STRUCT:: "<<origin_table<<", "<<TABLE[j].name<<endl;}
+		if (TABLE[j].name==origin_table){
+			TABLE[j].create_struct(key, value);
+			cout << "CREATE STRUCT(" << key << "): " << value << endl;
 			break;
 		}
 		j++;
@@ -367,56 +392,88 @@ void apply_rules(){
 	}
 }
 
+void auto_init(string table_name, string key, string value, int IDCODE){
+	int j=0;
+	
+	while(j<512){
+		//cout << "AUINI: " << table_name << ", "<<TABLE[j].name<<endl;
+		if (table_name==TABLE[j].name){
+			//if (TABLE[j].mapData[IDCODE][key]=="*"){
+			if (value.length() < 1 || value == "*"){
+				cout << "AUTO INIT STRUCT:" <<endl<<"IDCODE: "<<IDCODE<<" key:"<<key<<endl;
+				cout << "mapStruct: "<<TABLE[j].mapStruct[key]<<endl;
+				cout << "mapData: " << TABLE[j].mapData[IDCODE-1][key] << endl;
+				TABLE[j].mapData[IDCODE-1][key] = TABLE[j].mapStruct[key];
+				j=512;
+				break;
+			}		
+		}
+		j++;
+	}
+
+	
+}
+
 void DictX::insert_from(string table_name, string key, string value){
 	int j=0;
 	//map <int, string> outtab;
 	while (j<512)
 	{
 		if (TABLE[j].name==table_name){
-			TABLE[j].insert(TABLE[j].get_current_id(),key,value);
+			TABLE[j].update(TABLE[j].get_current_id(),key,value);
 			break;
 		}
 		j++;
 	}
 	apply_rules();
+	auto_init(table_name,key,value,TABLE[j].get_current_id());
+	
 	
 }
 
 void DictX::insert_from_new(string table_name, string key, string value){
+	//auto_init(table_name);
 	int j=0;
 	map <int, string> outtab;
 	while (j<512)
 	{
 		if (TABLE[j].name==table_name){
-			TABLE[j].insert(TABLE[j].get_current_id()+1,key,value);
+			TABLE[j].update(TABLE[j].get_current_id()+1,key,value);
 			break;
 		}
 		j++;
 	}
 	apply_rules();
+	auto_init(table_name,key,value,TABLE[j].get_current_id()+1);
+	
 }
 
 void DictX::insert_from_by_id(string table_name, string key, string value, int id_code){
+	//auto_init(table_name);
 	int j=0;
 	map <int, string> outtab;
 	while (j<512)
 	{
 		if (TABLE[j].name==table_name){
-			TABLE[j].insert(id_code,key,value);
+			TABLE[j].update(id_code,key,value);
 			break;
 		}
 		j++;
 	}
 	apply_rules();
+	auto_init(table_name,key,value,id_code);
+	
 }
 
 
 
 void DictX::load_database(string namefile){
+	string structure;
 	char input_dict[100000];
 	char input_dict2[100000];
 	string line;
 	string RELATIONS;
+	string STRUCTURE;
 	char nom_fichier[512];
 	if (getcwd(nom_fichier, sizeof(nom_fichier)) == NULL){
 		cout << "ERROR FILE PATH" << endl;
@@ -436,8 +493,15 @@ void DictX::load_database(string namefile){
 				}
 				else
 				{
-					strcat(input_dict,line.c_str());	
+					if (line.find("#STRUCT#")!=string::npos){
+						STRUCTURE = line.substr(line.find("#STRUCT#")+8,line.find("#STRUCTEND#")-8);
+						cout << "STRUCURE: " << STRUCTURE << endl;
+					}
+					else{
+						strcat(input_dict,line.c_str());	
+					}
 				}
+				
 			}
 			strcpy(input_dict2,input_dict);
 			fichier.close();
@@ -525,6 +589,36 @@ void DictX::load_database(string namefile){
 	}
 		
 	apply_rules();
+	
+	while (STRUCTURE.find(";")<STRUCTURE.length()){
+		size_t foundst = STRUCTURE.find(":");
+		if (foundst!=string::npos){
+			string namest = STRUCTURE.substr(0,STRUCTURE.find(":"));
+			string datast = STRUCTURE.substr(STRUCTURE.find(":")+1,STRUCTURE.find(";")-2);
+			string keyst = datast.substr(0,datast.find("$"));
+			string valuest = STRUCTURE.substr(STRUCTURE.find("$")+1,STRUCTURE.find(";")-2);
+			valuest = valuest.substr(0,valuest.find(';'));
+			if (datast.find(";")!=string::npos){
+				datast = datast.substr(0,datast.find(";"));
+			}
+			cout << "namest: " << namest << endl << "datast: " << datast<< endl << "keyst: " << keyst << endl<< "valuest: " << valuest<< endl;
+			STRUCTURE = STRUCTURE.substr(STRUCTURE.find(";")+1);
+			
+			
+			
+			int j=0;
+			while (j<512)
+			{
+				if (TABLE[j].name==namest){
+					TABLE[j].create_struct(keyst,valuest);
+					cout << "CREATE STRUCT: "<<namest<<" (" << namest << "): " << datast << endl;
+					break;
+				}
+				j++;
+			}			
+			
+		}
+	}
 	cout << "--DATABASE LOADED--" << endl;	
 }
 
@@ -533,15 +627,21 @@ void DictX::save_database(const string nom_fichier){
 	fichier.open(nom_fichier.c_str());
 	int j=0;
 	string ss1;
+	string ss2;
 	while (j<512)
 	{
 		if (TABLE[j].name!=""){
 			fichier << "$" << TABLE[j].name << "$";
 			map <int, map<string, string> >::iterator it;
-			
-			for (map<string,string>::iterator itrel=TABLE[j].mapRel.begin(); itrel!=TABLE[j].mapRel.end(); ++itrel){
+			map<string,string>::iterator itrel;
+			for (itrel=TABLE[j].mapRel.begin(); itrel!=TABLE[j].mapRel.end(); ++itrel){
 				ss1 = ss1 + (*itrel).first + ":" + (*itrel).second + ";";
 				cout << "REL:: " << (*itrel).first << ":" << (*itrel).second << endl;
+			} 
+			
+			for (map<string,string>::iterator itst=TABLE[j].mapStruct.begin(); itst!=TABLE[j].mapStruct.end(); ++itst){
+				ss2 = ss2 +TABLE[j].name+":"+ (*itst).first + "$" + (*itst).second + ";";
+				cout << "STRUCT:: " << TABLE[j].name+":"+ (*itst).first + "$" + (*itst).second + ";" << endl;
 			} 
 			
 			int key = 0;
@@ -559,5 +659,8 @@ void DictX::save_database(const string nom_fichier){
 	fichier << "\n#RELD#";
 	fichier << ss1;
 	fichier << "#ENDREL#";
+	fichier << "\n#STRUCT#";
+	fichier << ss2;
+	fichier << "#STRUCTEND#";
 	fichier.close();
 }

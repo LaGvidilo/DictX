@@ -1,0 +1,3 @@
+$auth$id%0:1,name%0:cyril,id%1:2,name%1:laurent,id%2:,name%2:koko,id%3:88,id%4:,name%4:jolie,name%5:buzz,name%6:yolo,name%7:NULL,name%8:NULL,name%9:Gogolito,name%10:NULL,$corde$id%0:1,the%0:nois,id%1:2,the%1:isnot,the%2:Godmichel,$END$
+#RELD##ENDREL#
+#STRUCT#auth:name$NULL;corde:id$66;corde:the$Godmichel;#STRUCTEND#

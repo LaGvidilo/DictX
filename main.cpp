@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.6.0      |" << endl;
+	cout << "|       v1.7.0      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -109,7 +109,7 @@ int main (int argc, const char * argv[]) {
 			cin >> table_name;
 			DX.create_table(table_name);
 		}
-		if (commande == "rule-add"){
+		if (commande == "add-rule"){
 			string rel_name;
 			cout << "\nRELATION NAME:";
 			cin >> rel_name;
@@ -142,6 +142,23 @@ int main (int argc, const char * argv[]) {
 			cin >> table_name1;
 			DX.delete_rel(table_name1, rel_name);
 		}
+		if (commande == "add-struct"){
+			string table_name1;
+			cout << "\nTABLE NAME:";
+			cin >> table_name1;
+
+			string key1;
+			cout << "\nKEY:";
+			cin >> key1;
+			
+			string st_name;
+			cout << "\nVALUE:";
+			cin >> st_name;
+			
+			
+			//string REL = table_name1+"$"+key1+"$"+rel_name;
+			DX.create_struct(table_name1, key1, st_name);
+		}		
 		/*if (commande == "select"){
 			string table_name;
 			string key_name;

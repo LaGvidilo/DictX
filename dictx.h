@@ -1,5 +1,5 @@
 /*
-DictX 1.6.0
+DictX 1.7.0
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -15,6 +15,7 @@ Version		Comment
   1.3.1			Get id
   1.4.0			Update
   1.6.0			Now simple relations called RULES
+  1.7.0			Now simple struct default
 */
 #ifndef DICTX_H
 #define DICTX_H
@@ -34,6 +35,7 @@ void affiche_tab(map<int, string> outtab);
 const unsigned long hash(const char *str);
 class DictX{
 	public:
+	void create_struct(string origin_table, string key, string value);
 	void delete_rel(string origin_table, string name);
 	void create_rel(string origin_table, string name, string rel);
 	map <int, string> search(const string table_name, string key);
