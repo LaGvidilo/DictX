@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.5.0      |" << endl;
+	cout << "|       v1.6.0      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;

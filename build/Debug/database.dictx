@@ -1,2 +1,2 @@
-$test2$code%0:25,name%0:Jean,name%1:Richard,$test$name%0:cyril,$toto$name%0:coco,code%1:4893,code%2:00125,datetime%2:<datetime>,name%2:hopi,$END$
-#RELD#b:test2$name$test$name;a:test$code$test2$code;frand:toto$code$test2$code;#ENDREL#
+$test2$code%0:666,name%0:Jean,code%1:4584,name%1:Richard,$test$name%0:cyril,$toto$code%0:666,name%0:coco,code%1:00125,datetime%2:<datetime>,name%2:hopi,code%3:48,name%3:78,bol%4:riz,code%4:789,hopiac%4:78,name%4:john,code%5:679,name%5:Zeo,$END$
+#RELD#b:test2$name$test$name;a:test$code$test2$code;fraude:toto$code$test2$code;#ENDREL#

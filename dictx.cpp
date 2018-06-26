@@ -294,6 +294,79 @@ void DictX::drop_table(const string table_name){
 	}
 }
 
+int findocc(map <int, map<string, string> > mapdata, string key)
+{
+	map <int, map<string, string> >::iterator it2;
+	for (it2=mapdata.begin(); it2!=mapdata.end(); ++it2){
+		map <string,string>::iterator it3;
+		for (it3=it2->second.begin(); it3!=it2->second.end(); ++it3){
+			if (it3->first == key){
+				return it2->first;
+			}
+		}
+	}
+	return -1;
+}
+
+string finddta(map <int, map<string, string> > mapdata, string key, int number)
+{
+	int numj=0;
+	map <int, map<string, string> >::iterator it2;
+	for (it2=mapdata.begin(); it2!=mapdata.end(); ++it2){
+		map <string,string>::iterator it3;
+		for (it3=it2->second.begin(); it3!=it2->second.end(); ++it3){
+			if (it3->first == key){
+				if (numj>=number){
+					return it3->second;
+				}
+				numj++;
+			}
+		}
+	}
+	return "";
+}
+
+void apply_rules(){
+	int j=0;
+	
+	while(j<512){
+		map<string,string> tmp=TABLE[j].mapRel;
+		
+		for (map<string,string>::iterator it = TABLE[j].mapRel.begin(); it!=TABLE[j].mapRel.end(); ++it){ 
+			string namerel = it->first;
+			string tableorigin = it->second.substr(0,it->second.find("$"));
+			it->second = it->second.substr(it->second.find("$")+1);
+			string keyorigin = it->second.substr(0,it->second.find("$"));
+			it->second = it->second.substr(it->second.find("$")+1);
+			string tabletarget = it->second.substr(0,it->second.find("$"));
+			it->second = it->second.substr(it->second.find("$")+1);
+			string keytarget = it->second.substr(0,it->second.find("$"));
+			it->second = it->second.substr(it->second.find("$")+1);
+			//finddta(TABLE[j].mapData, keyorigin, ynum);
+
+			
+			int h=0;
+			while (h<512){
+				int occtargetA = findocc(TABLE[h].mapData, keytarget);
+				int occtargetB = TABLE[h].get_current_id();
+				int ynum=0;
+				if (TABLE[h].name==tabletarget){
+					for (int occtarget=occtargetA; occtarget<occtargetB-1; ++occtarget){
+						string dataorigin = TABLE[j].mapData[ynum][keyorigin];
+						ynum++;
+						TABLE[h].update(occtarget, keytarget, dataorigin);
+						cout << "RULE: NAME("<<tabletarget<<") ID(" << occtarget << ") KEY("<<keytarget<<") DATA("<<dataorigin<<")"<<endl;
+					}
+				}
+				h++;
+			}
+			TABLE[j].mapRel = tmp;
+			
+		}
+		j++;		
+	}
+}
+
 void DictX::insert_from(string table_name, string key, string value){
 	int j=0;
 	//map <int, string> outtab;
@@ -305,6 +378,7 @@ void DictX::insert_from(string table_name, string key, string value){
 		}
 		j++;
 	}
+	apply_rules();
 	
 }
 
@@ -319,6 +393,7 @@ void DictX::insert_from_new(string table_name, string key, string value){
 		}
 		j++;
 	}
+	apply_rules();
 }
 
 void DictX::insert_from_by_id(string table_name, string key, string value, int id_code){
@@ -332,6 +407,7 @@ void DictX::insert_from_by_id(string table_name, string key, string value, int i
 		}
 		j++;
 	}
+	apply_rules();
 }
 
 
@@ -373,7 +449,7 @@ void DictX::load_database(string namefile){
 		}		
 	}
 	int lentmp=0;
-	
+	//int h=0;
 	int j=0;
 	int i=0;
 	string delim;
@@ -407,6 +483,7 @@ void DictX::load_database(string namefile){
 			value = value.substr(0,value.find(","));
 		
 			if (key!="") {
+			
 				TABLE[j].insert(id_code,key,value);
 				//cout << "---+KEY: " << key << endl;
 				//cout << "---+VALUE: " << value << endl;
@@ -446,7 +523,8 @@ void DictX::load_database(string namefile){
 			
 		}
 	}
-	
+		
+	apply_rules();
 	cout << "--DATABASE LOADED--" << endl;	
 }
 

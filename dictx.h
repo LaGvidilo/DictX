@@ -1,5 +1,5 @@
 /*
-DictX 1.5.0
+DictX 1.6.0
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -14,7 +14,7 @@ Version		Comment
   1.3			Delete from id & Drop table
   1.3.1			Get id
   1.4.0			Update
-
+  1.6.0			Now simple relations called RULES
 */
 #ifndef DICTX_H
 #define DICTX_H
