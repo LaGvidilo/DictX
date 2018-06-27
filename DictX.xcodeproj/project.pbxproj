@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* DictX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* DictX.1 */; };
+		F137EAEE20E2EB9D0033E177 /* terminaltable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F137EAEC20E2EB9D0033E177 /* terminaltable.h */; };
+		F137EAEF20E2EB9D0033E177 /* terminaltable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F137EAED20E2EB9D0033E177 /* terminaltable.cpp */; };
 		F148BEDD20CDCA430015F125 /* dictx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F148BEDB20CDCA430015F125 /* dictx.cpp */; };
 		F148BEDE20CDCA430015F125 /* dictx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148BEDC20CDCA430015F125 /* dictx.h */; };
 		F148C04D20CEEA220015F125 /* database.dictx in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148BFA720CED4080015F125 /* database.dictx */; };
@@ -30,6 +32,7 @@
 				F148C04D20CEEA220015F125 /* database.dictx in CopyFiles */,
 				F1AF003520DCB95E00A58066 /* base64.h in CopyFiles */,
 				F1AF003720DCB95E00A58066 /* md5.h in CopyFiles */,
+				F137EAEE20E2EB9D0033E177 /* terminaltable.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -39,6 +42,8 @@
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* DictX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DictX; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* DictX.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DictX.1; sourceTree = "<group>"; };
+		F137EAEC20E2EB9D0033E177 /* terminaltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = terminaltable.h; sourceTree = "<group>"; };
+		F137EAED20E2EB9D0033E177 /* terminaltable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = terminaltable.cpp; sourceTree = "<group>"; };
 		F148BEDB20CDCA430015F125 /* dictx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dictx.cpp; sourceTree = "<group>"; };
 		F148BEDC20CDCA430015F125 /* dictx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dictx.h; sourceTree = "<group>"; };
 		F148BFA720CED4080015F125 /* database.dictx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.dictx; sourceTree = "<group>"; };
@@ -69,6 +74,8 @@
 				F148BFA720CED4080015F125 /* database.dictx */,
 				F148BEDB20CDCA430015F125 /* dictx.cpp */,
 				F148BEDC20CDCA430015F125 /* dictx.h */,
+				F137EAEC20E2EB9D0033E177 /* terminaltable.h */,
+				F137EAED20E2EB9D0033E177 /* terminaltable.cpp */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859E8C029090F304C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
@@ -145,6 +152,7 @@
 				F148BEDD20CDCA430015F125 /* dictx.cpp in Sources */,
 				F1AF003420DCB95E00A58066 /* base64.cpp in Sources */,
 				F1AF003620DCB95E00A58066 /* md5.cpp in Sources */,
+				F137EAEF20E2EB9D0033E177 /* terminaltable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

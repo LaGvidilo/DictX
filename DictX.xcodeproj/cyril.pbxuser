@@ -59,8 +59,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 551675166;
-			PBXWorkspaceStateSaveDate = 551675166;
+			PBXPerProjectTemplateStateSaveDate = 551741975;
+			PBXWorkspaceStateSaveDate = 551741975;
 		};
 		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
 		userBuildSettings = {
@@ -68,9 +68,9 @@
 	};
 	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {643, 2506}}";
-			sepNavSelRange = "{3485, 0}";
-			sepNavVisRect = "{{0, 2153}, {643, 160}}";
+			sepNavIntBoundsRect = "{{0, 0}, {709, 2464}}";
+			sepNavSelRange = "{3758, 0}";
+			sepNavVisRect = "{{0, 0}, {709, 400}}";
 			sepNavWindowFrame = "{{48, 49}, {748, 529}}";
 		};
 	};
@@ -88,6 +88,22 @@
 			sepNavWindowFrame = "{{15, 43}, {749, 530}}";
 		};
 	};
+	F137EAEC20E2EB9D0033E177 /* terminaltable.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {547, 398}}";
+			sepNavSelRange = "{403, 0}";
+			sepNavVisRect = "{{0, 0}, {547, 398}}";
+			sepNavWindowFrame = "{{15, 43}, {586, 527}}";
+		};
+	};
+	F137EAED20E2EB9D0033E177 /* terminaltable.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {547, 476}}";
+			sepNavSelRange = "{466, 9}";
+			sepNavVisRect = "{{0, 78}, {547, 398}}";
+			sepNavWindowFrame = "{{140, 51}, {586, 527}}";
+		};
+	};
 	F148BBF820CB16680015F125 /* XCBreakpointsBucket */ = {
 		isa = XCBreakpointsBucket;
 		name = "Project Breakpoints";
@@ -96,18 +112,18 @@
 	};
 	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {872, 9338}}";
-			sepNavSelRange = "{8493, 0}";
-			sepNavVisRect = "{{0, 5409}, {547, 398}}";
-			sepNavWindowFrame = "{{53, 51}, {586, 527}}";
+			sepNavIntBoundsRect = "{{0, 0}, {872, 9898}}";
+			sepNavSelRange = "{16438, 0}";
+			sepNavVisRect = "{{0, 6216}, {547, 398}}";
+			sepNavWindowFrame = "{{139, 51}, {586, 527}}";
 		};
 	};
 	F148BEDC20CDCA430015F125 /* dictx.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {710, 728}}";
-			sepNavSelRange = "{846, 0}";
-			sepNavVisRect = "{{0, 313}, {710, 401}}";
-			sepNavWindowFrame = "{{19, 48}, {749, 530}}";
+			sepNavIntBoundsRect = "{{0, 0}, {710, 770}}";
+			sepNavSelRange = "{1183, 0}";
+			sepNavVisRect = "{{0, 369}, {710, 401}}";
+			sepNavWindowFrame = "{{27, 48}, {749, 530}}";
 		};
 	};
 	F148BFA720CED4080015F125 /* database.dictx */ = {

@@ -15,6 +15,9 @@
 
 #include "md5.h"
 #include "base64.h"
+
+#include "terminaltable.h"
+
 using namespace std;
 
 
@@ -164,6 +167,23 @@ class Table
 		return tableau;
 	}
 	
+	map <int, string> search_mult(string cle){
+		stringstream cles(cle);
+		map <int, string> tableau;
+		map <int, string> tabtmp;
+		string token;
+		while(getline(cles,token,',')){
+			tabtmp = search(token);
+			for (map<int, string>::iterator it=tabtmp.begin(); it!=tabtmp.end(); ++it){
+				tableau.insert(pair<int,string> (it->first,it->second));
+			}
+			
+		}
+
+		return tableau;
+	}
+	
+	
 	void update(int ID, string cle, string value){
 		map <int, map<string, string> >::iterator it;
 		for (it=mapData.begin(); it!=mapData.end(); ++it){
@@ -288,7 +308,23 @@ void DictX::aff_search(const string table_name, string key){
 	{
 		if (TABLE[j].name==table_name){
 			outtab = TABLE[j].search(key);
-			affiche_tab(outtab);
+			aff_table(outtab);
+			//affiche_tab(outtab);
+			break;
+		}
+		j++;
+	}
+}
+
+void DictX::aff_select(const string table_name, string key){
+	int j=0;
+	map <int, string> outtab;
+	while (j<512)
+	{
+		if (TABLE[j].name==table_name){
+			outtab = TABLE[j].search_mult(key);
+			aff_table(outtab);
+			//affiche_tab(outtab);
 			break;
 		}
 		j++;
@@ -664,3 +700,4 @@ void DictX::save_database(const string nom_fichier){
 	fichier << "#STRUCTEND#";
 	fichier.close();
 }
+

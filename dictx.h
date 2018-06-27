@@ -1,5 +1,5 @@
 /*
-DictX 1.7.0
+DictX 1.7.3
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -16,6 +16,7 @@ Version		Comment
   1.4.0			Update
   1.6.0			Now simple relations called RULES
   1.7.0			Now simple struct default
+  1.7.3			Meilleur affichage search
 */
 #ifndef DICTX_H
 #define DICTX_H
@@ -40,6 +41,7 @@ class DictX{
 	void create_rel(string origin_table, string name, string rel);
 	map <int, string> search(const string table_name, string key);
 	void aff_search(const string table_name, string key);
+	//void aff_select(const string table_name, string keys);
 	void load_database(string namefile);
 	void delete_id(const string table_name, int ID);
 	void insert_from(string table_name, string key, string value);

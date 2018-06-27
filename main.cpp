@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.7.0      |" << endl;
+	cout << "|       v1.7.3      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -161,16 +161,13 @@ int main (int argc, const char * argv[]) {
 		}		
 		/*if (commande == "select"){
 			string table_name;
-			string key_name;
-			int ID;
+			string keys_name;
 			string value;
 			cout << "\nTABLE NAME:";
 			cin >> table_name;
-			cout << "\nID:";
-			cin >> ID;
 			cout << "\nKEYS NAMES(separator: ','):";
-			cin >> key_name;
-		
+			cin >> keys_name;
+			DX.aff_select(table_name,keys_name);
 		}*/
 	}
 			
