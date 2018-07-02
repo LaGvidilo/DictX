@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	
 	cout << "*===================*" << endl;
 	cout << "|   DictX Terminal  |" << endl;
-	cout << "|       v1.7.3      |" << endl;
+	cout << "|       v1.8.0      |" << endl;
 	cout << "|  By Rick Sanchez  |" << endl;
 	cout << "|       D-634       |" << endl;
 	cout << "*===================*" << endl;
@@ -158,7 +158,7 @@ int main (int argc, const char * argv[]) {
 			
 			//string REL = table_name1+"$"+key1+"$"+rel_name;
 			DX.create_struct(table_name1, key1, st_name);
-		}		
+		}							
 		/*if (commande == "select"){
 			string table_name;
 			string keys_name;

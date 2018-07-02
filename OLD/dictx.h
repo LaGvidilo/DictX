@@ -1,5 +1,5 @@
 /*
-DictX 1.8.0
+DictX 1.7.3
 Invented By Rick Sanchez
 In 2018
 On a iMac G3 500Mhz with 256Mb of RAM
@@ -17,7 +17,6 @@ Version		Comment
   1.6.0			Now simple relations called RULES
   1.7.0			Now simple struct default
   1.7.3			Meilleur affichage search
-  1.8.0			Correction Bug et STRUCTURE, RELATION
 */
 #ifndef DICTX_H
 #define DICTX_H
@@ -52,6 +51,5 @@ class DictX{
 	void drop_table(const string table_name);
 	void update(const int ID, const string table_name, string key,string value);
 	void create_table(const string table_name);
-	void insert_from_here(string table_name, string key, string value);
 };
 #endif

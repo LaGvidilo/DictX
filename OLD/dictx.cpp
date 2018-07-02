@@ -12,11 +12,11 @@
 #include <iterator>
 #include <algorithm>
 #include <sstream>
-#include <ctime>
 
 #include "md5.h"
 #include "base64.h"
 
+#include "terminaltable.h"
 
 using namespace std;
 
@@ -164,7 +164,6 @@ class Table
 				 }
 			}
 		} 
-		cout << "SIZE OF SEARCH:" << sizeof(tableau)<<endl;
 		return tableau;
 	}
 	
@@ -309,15 +308,15 @@ void DictX::aff_search(const string table_name, string key){
 	{
 		if (TABLE[j].name==table_name){
 			outtab = TABLE[j].search(key);
-			//aff_table(outtab);
-			affiche_tab(outtab);
+			aff_table(outtab);
+			//affiche_tab(outtab);
 			break;
 		}
 		j++;
 	}
 }
 
-/*void DictX::aff_select(const string table_name, string key){
+void DictX::aff_select(const string table_name, string key){
 	int j=0;
 	map <int, string> outtab;
 	while (j<512)
@@ -330,7 +329,7 @@ void DictX::aff_search(const string table_name, string key){
 		}
 		j++;
 	}
-}*/
+}
 				
 void DictX::delete_id(const string table_name, int ID){
 	int j=0;
@@ -429,29 +428,18 @@ void apply_rules(){
 	}
 }
 
-string get_date_now(){
-	stringstream date_tmp;
-	time_t now = time(0);
-	tm *ltm = localtime(&now);
-	date_tmp<<(ltm->tm_mday)<<"/"<<(ltm->tm_mon)<<"/"<<(ltm->tm_year)-100;
-	return date_tmp.str();
-}
-
 void auto_init(string table_name, string key, string value, int IDCODE){
 	int j=0;
-	string TMP;
+	
 	while(j<512){
-		cout << "AUINI: " << table_name << ", "<<TABLE[j].name<<endl;
+		 << "AUINI: " << table_name << ", "<<TABLE[j].name<<endl;
 		if (table_name==TABLE[j].name){
 			//if (TABLE[j].mapData[IDCODE][key]=="*"){
 			if (value.length() < 1 || value == "*"){
 				cout << "AUTO INIT STRUCT:" <<endl<<"IDCODE: "<<IDCODE<<" key:"<<key<<endl;
 				cout << "mapStruct: "<<TABLE[j].mapStruct[key]<<endl;
 				cout << "mapData: " << TABLE[j].mapData[IDCODE-1][key] << endl;
-
-				TMP=TABLE[j].mapStruct[key];
-				if (TMP=="<DATE>"){TMP=get_date_now();}
-				TABLE[j].mapData[IDCODE-1][key] = TMP;
+				TABLE[j].mapData[IDCODE-1][key] = TABLE[j].mapStruct[key];
 				j=512;
 				break;
 			}		
@@ -486,24 +474,7 @@ void DictX::insert_from_new(string table_name, string key, string value){
 	while (j<512)
 	{
 		if (TABLE[j].name==table_name){
-			TABLE[j].insert(TABLE[j].get_current_id()+1,key,value);
-			break;
-		}
-		j++;
-	}
-	apply_rules();
-	auto_init(table_name,key,value,TABLE[j].get_current_id()+1);
-	
-}
-
-void DictX::insert_from_here(string table_name, string key, string value){
-	//auto_init(table_name);
-	int j=0;
-	map <int, string> outtab;
-	while (j<512)
-	{
-		if (TABLE[j].name==table_name){
-			TABLE[j].insert(TABLE[j].get_current_id(),key,value);
+			TABLE[j].update(TABLE[j].get_current_id()+1,key,value);
 			break;
 		}
 		j++;
@@ -529,6 +500,7 @@ void DictX::insert_from_by_id(string table_name, string key, string value, int i
 	auto_init(table_name,key,value,id_code);
 	
 }
+
 
 
 void DictX::load_database(string namefile){
@@ -592,7 +564,7 @@ void DictX::load_database(string namefile){
 		if (strlen(input_dict)==4){break;}
 		//printf("DELIM: %s\n", strtok(input_dict,"$"));
 		TABLE[j].set_name(strtok(input_dict,"$"));
-		cout << "\nNAME OF TABLE CREATED: " << TABLE[j].name << endl;
+		 << "\nNAME OF TABLE CREATED: " << TABLE[j].name << endl;
 		decoupe(input_dict,input_dict2,lentmp);
 		//printf("AFTER DECOUPE: %s\n\n", input_dict);
 	
@@ -613,8 +585,8 @@ void DictX::load_database(string namefile){
 			if (key!="") {
 			
 				TABLE[j].insert(id_code,key,value);
-				cout << "---+KEY: " << key << endl;
-				cout << "---+VALUE: " << value << endl;
+				 << "---+KEY: " << key << endl;
+				 << "---+VALUE: " << value << endl;
 				
 			}
 			
@@ -708,11 +680,11 @@ void DictX::save_database(const string nom_fichier){
 				cout << "STRUCT:: " << TABLE[j].name+":"+ (*itst).first + "$" + (*itst).second + ";" << endl;
 			} 
 			
-			map<int, map<string,string> >::iterator key=TABLE[j].mapData.begin();
+			int key = 0;
 			for (it = TABLE[j].mapData.begin(); it != TABLE[j].mapData.end(); ++it){
 				map<string, string> mapit2 = it->second;
 				for (map<string, string>::const_iterator it2 = mapit2.begin();  it2 != mapit2.end(); ++it2){
-					fichier << (*it2).first << "%" << key->first << ":" << (*it2).second << ",";
+					fichier << (*it2).first << "%" << key << ":" << (*it2).second << ",";
 				}
 				key++;
 			}

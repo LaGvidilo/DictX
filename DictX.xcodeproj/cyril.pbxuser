@@ -59,8 +59,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 551741975;
-			PBXWorkspaceStateSaveDate = 551741975;
+			PBXPerProjectTemplateStateSaveDate = 552201379;
+			PBXWorkspaceStateSaveDate = 552201379;
+		};
+		perUserProjectItems = {
+			F1B26F1420E9F35F00008A90 /* PBXTextBookmark */ = F1B26F1420E9F35F00008A90 /* PBXTextBookmark */;
+			F1B26F1520E9F35F00008A90 /* PBXTextBookmark */ = F1B26F1520E9F35F00008A90 /* PBXTextBookmark */;
 		};
 		sourceControlManager = F1F5C3A120CAC47700236B8A /* Source Control */;
 		userBuildSettings = {
@@ -69,8 +73,8 @@
 	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {709, 2464}}";
-			sepNavSelRange = "{3758, 0}";
-			sepNavVisRect = "{{0, 0}, {709, 400}}";
+			sepNavSelRange = "{303, 0}";
+			sepNavVisRect = "{{0, 2}, {709, 400}}";
 			sepNavWindowFrame = "{{48, 49}, {748, 529}}";
 		};
 	};
@@ -112,17 +116,17 @@
 	};
 	F148BEDB20CDCA430015F125 /* dictx.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {872, 9898}}";
-			sepNavSelRange = "{16438, 0}";
-			sepNavVisRect = "{{0, 6216}, {547, 398}}";
-			sepNavWindowFrame = "{{139, 51}, {586, 527}}";
+			sepNavIntBoundsRect = "{{0, 0}, {872, 10248}}";
+			sepNavSelRange = "{3386, 0}";
+			sepNavVisRect = "{{0, 1999}, {547, 398}}";
+			sepNavWindowFrame = "{{214, 51}, {586, 527}}";
 		};
 	};
 	F148BEDC20CDCA430015F125 /* dictx.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {710, 770}}";
-			sepNavSelRange = "{1183, 0}";
-			sepNavVisRect = "{{0, 369}, {710, 401}}";
+			sepNavIntBoundsRect = "{{0, 0}, {710, 798}}";
+			sepNavSelRange = "{14, 0}";
+			sepNavVisRect = "{{0, 0}, {710, 401}}";
 			sepNavWindowFrame = "{{27, 48}, {749, 530}}";
 		};
 	};
@@ -141,6 +145,26 @@
 			sepNavVisRect = "{{0, 0}, {709, 400}}";
 			sepNavWindowFrame = "{{15, 49}, {748, 529}}";
 		};
+	};
+	F1B26F1420E9F35F00008A90 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 23";
+		rLen = 0;
+		rLoc = 346;
+		rType = 0;
+		vrLen = 528;
+		vrLoc = 818;
+	};
+	F1B26F1520E9F35F00008A90 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F148BEDB20CDCA430015F125 /* dictx.cpp */;
+		name = "dictx.cpp: 167";
+		rLen = 0;
+		rLoc = 3386;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 2695;
 	};
 	F1F5C39D20CAC45600236B8A /* DictX */ = {
 		isa = PBXExecutable;
